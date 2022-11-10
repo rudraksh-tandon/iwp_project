@@ -30,12 +30,12 @@ const Train = mongoose.model('Train', trainSchema)
 
 // This is for adding trains to the database ......
 const train = new Train({
-    trName:'Majra Express',
-    trNo:20,
-    start:'Ahmedabad',
-    end:'New Delhi',
-    //runsOn:[{days:'Tuesday'},{days:'Thursday'},{days:'Saturday'},{days:'Friday'}],
-    runsOn:[{days:'Wednesday'},{days:'Monday'},{days:'Sunday'}]
+    trName:'Chennai Express',
+    trNo:16,
+    start:'Chennai Jn',
+    end:'Banglore Jn',
+    // runsOn:[{days:'Tuesday'},{days:'Saturday'},{days:'Friday'}],
+    runsOn:[{days:'Wednesday'},{days:'Monday'},{days:'Sunday'},{days:'Saturday'}]
 })
 train.save().then(()=>{
     //console.log(train)

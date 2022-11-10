@@ -38,7 +38,7 @@ router.get('/users',(req,res)=>{
 })
 
 router.post('/logout',(req,res)=>{
-    req.logout()
+    req.logout
     res.redirect('/si.html')
 })
 

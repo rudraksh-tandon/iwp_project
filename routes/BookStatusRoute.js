@@ -7,7 +7,7 @@ const Booking = require('../models/Booking')
 
 router.get('/login/bookingstatus', ensureAuthenticated, async (req, res) => {
     const user = await User.findById(req.user._id.toString())
-    await user.populate('trains').execPopulate()
+    await user.populate('trains')
     const trains = user.trains
     const ar = []
     //res.send(user.trains)

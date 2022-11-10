@@ -19,18 +19,18 @@ const stationSchema = new mongoose.Schema({
 const Station = mongoose.model('Station', stationSchema)
 
  // This is for adding station to the database ......
-const station = new Station({
-    stName:'Varanasi Jn',
-    trainName:'Humayun Express',
-    trainNo:16,
-    origin:'New Delhi',
-    destination:'Ahmedabad',
-    noOfPlatform:9
-})
-station.save().then(()=>{
-    //console.log(train)
-}).catch((e)=>{
-    //console.log(e)
-})
+// const station = new Station({
+//     stName:'Bangalore Jn',
+//     trainName:'Kalka Mail Rajdhani',
+//     trainNo:13,
+//     origin:'New Delhi Jn',
+//     destination:'Bangalore Jn',
+//     noOfPlatform:12
+// })
+// station.save().then(()=>{
+//     //console.log(train)
+// }).catch((e)=>{
+//     //console.log(e)
+// })
 
 module.exports = Station

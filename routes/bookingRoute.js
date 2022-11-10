@@ -3,6 +3,7 @@ const express = require('express')
 const router = new express.Router
 const { ensureAuthenticated } = require('../auth')
 const Train = require('../models/train')
+const nodemailer = require('nodemailer')
 
 router.get('/login/train_details', async (req, res) => {
     const take = req.query
