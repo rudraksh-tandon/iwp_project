@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const userSchema = new mongoose.Schema({
+const bookingStatusSchema = new mongoose.Schema({
     completed:{
         type:String,
         required:true
@@ -19,6 +19,6 @@ const userSchema = new mongoose.Schema({
     seat:String
 })
 
-const BookingStatus = mongoose.model('BookingStatus', userSchema)
+const BookingStatus = mongoose.model('BookingStatus', bookingStatusSchema)
 
 module.exports = BookingStatus

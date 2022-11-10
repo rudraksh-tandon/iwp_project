@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const userSchema = new mongoose.Schema({
+const trainSchema = new mongoose.Schema({
     trNo:{
         type:Number,
         required:true
@@ -26,20 +26,20 @@ const userSchema = new mongoose.Schema({
     date:Date
 })
 
-const Train = mongoose.model('Train', userSchema)
+const Train = mongoose.model('Train', trainSchema)
 
 // This is for adding trains to the database ......
-// const train = new Train({
-//     trName:'Majra Express',
-//     trNo:20,
-//     start:'Ahmedabad',
-//     end:'New Delhi',
-//     //runsOn:[{days:'Tuesday'},{days:'Thursday'},{days:'Saturday'},{days:'Friday'}],
-//     runsOn:[{days:'Wednesday'},{days:'Monday'},{days:'Sunday'}]
-// })
-// train.save().then(()=>{
-//     //console.log(train)
-// }).catch((e)=>{
-//     //console.log(e)
-// })
+const train = new Train({
+    trName:'Majra Express',
+    trNo:20,
+    start:'Ahmedabad',
+    end:'New Delhi',
+    //runsOn:[{days:'Tuesday'},{days:'Thursday'},{days:'Saturday'},{days:'Friday'}],
+    runsOn:[{days:'Wednesday'},{days:'Monday'},{days:'Sunday'}]
+})
+train.save().then(()=>{
+    //console.log(train)
+}).catch((e)=>{
+    //console.log(e)
+})
 module.exports = Train

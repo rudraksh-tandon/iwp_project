@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const validator = require('validator')
 
-const userSchema = new mongoose.Schema({
+const stationSchema = new mongoose.Schema({
     stName:{
         type:String,
     },
@@ -16,21 +16,21 @@ const userSchema = new mongoose.Schema({
     noOfPlatform:Number
 })
 
-const Station = mongoose.model('Station', userSchema)
+const Station = mongoose.model('Station', stationSchema)
 
  // This is for adding station to the database ......
-// const station = new Station({
-//     stName:'Example Jn',
-//     trainName:'Humayun Express',
-//     trainNo:16,
-//     origin:'New Delhi',
-//     destination:'Ahmedabad',
-//     noOfPlatform:9
-// })
-// station.save().then(()=>{
-//     //console.log(train)
-// }).catch((e)=>{
-//     //console.log(e)
-// })
+const station = new Station({
+    stName:'Varanasi Jn',
+    trainName:'Humayun Express',
+    trainNo:16,
+    origin:'New Delhi',
+    destination:'Ahmedabad',
+    noOfPlatform:9
+})
+station.save().then(()=>{
+    //console.log(train)
+}).catch((e)=>{
+    //console.log(e)
+})
 
 module.exports = Station

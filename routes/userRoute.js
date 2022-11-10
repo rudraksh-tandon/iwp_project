@@ -9,10 +9,14 @@ const {ensureAuthenticated} = require('../auth')
 // })
 
 router.post('/signup',(req,res)=>{
-    const user = new User(req.body)
+    const {name,username,email,password,mobile} = req.body;
+    const user = new User({
+        name,username,email,password,mobile
+    })
     user.save().then(()=>{
         res.redirect('/si.html')
     }).catch((e)=>{
+        console.log(e);
         res.send('Bad Request')
     })
 })

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const userSchema = new mongoose.Schema({
+const bookingSchema = new mongoose.Schema({
     Train_number:{
         type:Number,
         required:true
@@ -24,6 +24,6 @@ const userSchema = new mongoose.Schema({
     }
 })
 
-const booking = mongoose.model('booking', userSchema)
+const booking = mongoose.model('booking', bookingSchema)
 
 module.exports = booking

@@ -29,5 +29,3 @@ router.get('/sbn',async(req,res)=>{
 })
 
 module.exports = router
-
-
