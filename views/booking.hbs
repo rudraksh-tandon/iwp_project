@@ -47,6 +47,9 @@
 
 		{{#each train}}
 		<form action='http://localhost:3000/login/book' method='POST'>
+		<input type="hidden" name="Train_number" value="{{this.trNo}}">
+		<input type="hidden" name="Train_name" value="{{this.trName}}">
+
 			<tr style="background-color: #ffffff;
 				border-radius: 40px; 
 				padding: 50px 5px;
