@@ -1,6 +1,3 @@
-//This is the main file
-//To run type "npm run start"
-
 const express = require('express')
 const path = require('path')
 const publicDir = path.join('./public') 
